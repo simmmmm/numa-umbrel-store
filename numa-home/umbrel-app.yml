@@ -19,7 +19,7 @@ environment:
 category: files
 name: Numa Home
 icon: https://raw.githubusercontent.com/simmmmm/Numa/main/data/branding/icon-dark@2x.png
-version: "0.45.1"
+version: "0.46.0"
 tagline: Your household's photographs, at home
 description: >-
   Open Numa Home after installation and make the first account. It is the admin and can make an account for everyone else. On the first start the face and search models (about 520 MB) are downloaded, and then the photographs are read in the background.
