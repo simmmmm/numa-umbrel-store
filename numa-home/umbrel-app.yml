@@ -1,0 +1,62 @@
+manifestVersion: 1
+id: numa-home
+storage:
+  dataRoot: data
+folderAccess:
+  - id: photos
+    name: Photographs
+    note: Select the folder that holds your photographs. Numa Home shows every library in it and keeps a small catalog in a .numa folder inside each one, so the folder must be writable.
+    mounts:
+      - service: server
+        targetPath: /photos
+        readOnly: false
+environment:
+  - name: TZ
+    services:
+      - server
+    default: Etc/UTC
+    note: Your time zone, for example Europe/Berlin. The night shift, when Numa Home catches up and checks everything, runs from 01:00 to 06:00 in it.
+category: files
+name: Numa Home
+icon: https://raw.githubusercontent.com/simmmmm/Numa/main/data/branding/icon-dark@2x.png
+version: "0.45.1"
+tagline: Your household's photographs, at home
+description: >-
+  Open Numa Home after installation and make the first account. It is the admin and can make an account for everyone else. On the first start the face and search models (about 520 MB) are downloaded, and then the photographs are read in the background.
+
+
+  Numa Home shows every photograph in the house in a browser, on a phone or on the TV. Raws such as RAF, ARW, CR3, NEF and DNG are rendered with Numa's colour and your edits, not the camera's small preview. Faces are found and grouped, and search understands words such as "beach at sunset". Nothing goes to the cloud.
+
+
+  - A timeline of every month, with a scrubber that shows each trip
+
+  - An account for each person, and a filter by who took a photograph
+
+  - Albums, stars and picks, shared by the household
+
+  - Send Home from the Numa apps for Linux, Mac and iPhone
+
+  - Your archive as it is: point it at the folders you already have
+
+
+  One container with SQLite. No database server and no separate machine-learning container.
+releaseNotes: ""
+developer: Numa
+website: https://numa.photo/numa-home
+dependencies: []
+repo: https://github.com/simmmmm/Numa
+support: https://github.com/simmmmm/numa-home/issues
+port: 8283
+gallery:
+  - https://raw.githubusercontent.com/simmmmm/numa-home/main/docs/timeline.webp
+  - https://raw.githubusercontent.com/simmmmm/numa-home/main/docs/search.webp
+  - https://raw.githubusercontent.com/simmmmm/numa-home/main/docs/photo.webp
+  - https://raw.githubusercontent.com/simmmmm/numa-home/main/docs/tidy.webp
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+backupIgnore:
+  - data/server/cache/*
+  - data/server/models/*
+submitter: simmmmm
+submission: https://github.com/simmmmm/numa-home

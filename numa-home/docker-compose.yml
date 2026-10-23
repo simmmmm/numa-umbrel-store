@@ -1,0 +1,18 @@
+services:
+  app_proxy:
+    environment:
+      APP_HOST: numa-home_server_1
+      APP_PORT: 8283
+      PROXY_AUTH_WHITELIST: "/api/*"
+
+  server:
+    image: ghcr.io/simmmmm/numa-home:0.45.1@sha256:0f9a2c2a3414744ebf538003869b7a1b3f74263849df256c1b26fafe8c75ab06
+    user: "1000:1000"
+    restart: on-failure
+    environment:
+      TZ: Etc/UTC
+      NUMA_HOME_PROXY: ${NETWORK_IP}/16
+    volumes:
+      - ${APP_DATA_DIR}/data/photos:/photos
+      - ${APP_DATA_DIR}/data/sent:/sent
+      - ${APP_DATA_DIR}/data/server:/data
