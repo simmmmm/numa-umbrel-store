@@ -6,7 +6,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   server:
-    image: ghcr.io/simmmmm/numa-home:0.52.0@sha256:7f7d4c3db7138bcd2d2a1f59abe0afdbf91ecac3aaa11c6b6e733a3bc96015b2
+    image: ghcr.io/simmmmm/numa-home:0.52.0-home.1@sha256:daf3044c34841c94009881a00fdc397fbd539d501687dd13899052f63eba2831
     user: "1000:1000"
     restart: on-failure
     environment:
